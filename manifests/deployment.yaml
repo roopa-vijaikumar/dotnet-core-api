@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: autodeploy
+  name: RVAKSAutodeploy01
   labels:
-    app: autodeploy
-  namespace: namespace-workflow-1692811819315
+    app: RVAKSAutodeploy01
+  namespace: rvaksworkflow01
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: autodeploy
+      app: RVAKSAutodeploy01
   template:
     metadata:
       labels:
-        app: autodeploy
+        app: RVAKSAutodeploy01
     spec:
       containers:
-        - name: autodeploy
-          image: acrworkflow1692811819315.azurecr.io/image-workflow-1692811819315:latest
+        - name: RVAKSAutodeploy01
+          image: rvaksregistry01.azurecr.io/rvaksimageworkflow01:latest
           ports:
             - containerPort: 5000
