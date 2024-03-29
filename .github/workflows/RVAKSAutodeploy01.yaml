@@ -1,4 +1,4 @@
-name: RVAKSAutodeploy01
+name: rvaksautodeploy01
 "on":
     push:
         branches:
